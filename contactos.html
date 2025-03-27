@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTOS</title>
+    <link rel="stylesheet" href="css/contactos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="logo">
+        <img src="image/logo camara.png" alt="Logo Techzy">
+    </div>
+    <div class="titulo">
+        <h1>Techzy Security</h1>
+    </div> 
+    
+    <div class="d-flex">
+        <button id="cerrar">CERRAR</button>
+        <div class="bolsa bi-bag" id="bolsa">
+            <span class="cuenta">...</span>
+            <div class="carrito" id="carrito">
+
+                <div class="arriba">
+                   <h3>Tu carrito esta vacio</h3>
+                   <p>Empieza a comprar ahora</p>
+                </div>
+
+                <table>
+                    <tbody>
+
+                    </tbody>
+                </table>
+
+                <div class="abajo">
+
+                    <div class="precios">
+                        <p>TOTAL incluido IVA: </p>
+                        <p id="precio"></p>
+                    </div>
+                    <div class="botones" >
+                        <button id="comprar">COMPRAR</button>
+                         
+                    </div>
+                    <a href="#" id="vaciar" OnClick="vaciar2();"> Vaciar carrito</a>
+                </div>
+            </div>
+        </div>
+    </div>  
+</header>
+<section class="menuTienda">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">INICIO</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="hikvision.html">HIKVISION</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="hilook.html">HILOOK</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ezviz.html">EZVIZ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="accesorios.html">ACCESORIOS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="contactos.html">CONTACTANOS</a>
+          </li>
+      </ul>
+</section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6"> <br>
+                <h1 class="h3">CONTACTOS</h1>
+                <form id="formulario">
+                    <div class="mb-3" id="grupo-nombre">
+                        <label for="Nombres" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="nombres" name="nombres" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text imput-error">Escribe tu Nombres y solo puede contener letras y un minimo de 4 letras.</div>
+                      </div>
+                      <div class="mb-3" id="grupo-celular">
+                        <label for="Numero celular" class="form-label">Numero celular</label>
+                        <input type="text" class="form-control" id="celular" name="celular" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text imput-error"> El numero telefonico debe contener 10 caracteres y solo ser numeros</div>
+                      </div>
+                    <div class="mb-3" id="grupo-email">
+                      <label for="Email" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text imput-error">Ingrese su coreo electronico</div>
+                    </div>
+                    <div class="mb-3" id="grupo-ciudad">
+                      <label for="Cuidad-Pais" class="form-label">Cuidad-Pais</label>
+                      <input type="text" class="form-control" id="cuidad" name="ciudad">
+                      <div id="emailHelp" class="form-text imput-error"> Solo deben ingresarse letras</div>
+                    </div>
+                    <div class="mb-3" id="grupo-comentario">
+                        <label for="">Comentario de tu experiencia/reclamo</label>
+                        <label for="Comentario" class="form-label imput-error">Comentario de tu experiencia/reclamo</label>
+                        <textarea class="form-control" id="comentario" name="comentario" rows="3"></textarea>
+                      </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="terminos">
+                      <label class="form-check-label" for="exampleCheck1 ">He leído y estoy de acuerdo con los <strong>términos y condiciones</strong>  y <strong>políticas de privacidad</strong> </label>
+                    </div>
+                    <div id="alertEnviar"   class="alert alert-success" role="alert">
+                      <strong>Enviado.</strong> Muchas gracias por tu comentario / sugerencia.
+                    </div>
+                    <div id="alertGeneral" class="alert alert-danger" role="alert">
+                        <strong>Error. </strong> Todos los campos deben estar llenos!
+                      </div>
+                    <button type="submit" class="btn btn-primary" id="enviar">Enviar</button>
+                  </form>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+      <div class="img-footer">
+          <img src="image/logo camara.png" alt="LogoEMpresa">
+      </div>
+      <div class="info-footer">
+          <strong>SITIO</strong>
+          <ul>
+              <li>
+                  Página Corporativa
+              </li>
+              <li>
+                  Centro de Servicio Técnico
+              </li>
+              <li>
+                  Responsabilidad ambiental
+              </li>
+          </ul>
+          <strong>LEGAL</strong>
+          <ul>
+              <li>
+                  Politicas de garantia
+              </li>
+              <li>
+                  Politica de proteccion de datos
+              </li>
+          </ul>
+      </div>
+      <section class="tienda-div">
+        <div class="tienda-footer">
+            <strong> CONTACTOS QUITO</strong> <br>
+            <i class="bi bi-geo-alt-fill"></i> Argelia: Calle Taya y Taday <br>
+            <i class="bi bi-telephone-fill"></i> (02) 2911656/ 0992379617 <br>
+            <i class="bi bi-envelope-fill"></i> alex1812solo@gmail.com
+        </div>
+        <div class="tienda-footer">
+            <strong>CONTACTO GUAYAQUIL</strong> <br>
+            <i class="bi bi-geo-alt-fill"></i> Calle CH Onceava y Septima <br>
+            <i class="bi bi-telephone-fill"></i> (02) 2456454/ 0994040222 <br>
+            <i class="bi bi-envelope-fill"></i> alex1812solo@gmail.com
+        </div>
+
+    </section>
+  </footer>
+  <section class="distri">
+      <div>
+          <img src="image/servientrega.jpg" alt="">
+      </div>
+      <div>
+          <img src="image/tramaco.png" alt="">
+      </div>
+  </section>
+  <section class="copy">
+      <div>
+          <p>Copyright © 2024. Techzy C.A. Todos los derechos reservados.</p>
+      </div>
+  </section>
+  <script src="js/app.js"> </script>
+    <script src="js/contactos.js"></script>
+</body>
+</html>

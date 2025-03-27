@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techzy Security</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="logo">
+            <img src="image/logo camara.png" alt="Logo Techzy">
+        </div>
+        <div class="titulo">
+            <h1>Techzy Security</h1>
+        </div> 
+        
+        <div class="d-flex">
+            <button id="cerrar">CERRAR</button>
+            <div class="bolsa bi-bag" id="bolsa">
+                <span class="cuenta">...</span>
+                <div class="carrito" id="carrito">
+    
+                    <div class="arriba">
+                       <h3>Tu carrito esta vacio</h3>
+                       <p>Empieza a comprar ahora</p>
+                    </div>
+    
+                    <table id="alex">
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+    
+                    <div class="abajo">
+    
+                        <div class="precios">
+                            <p>TOTAL incluido IVA: </p>
+                            <p id="precio"></p>
+                        </div>
+                        <div class="botones" >
+                            <button id="comprar">COMPRAR</button>
+                             
+                        </div>
+                        <a href="#" id="vaciar" OnClick="vaciar2();"> Vaciar carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </header>
+    <section class="menuTienda">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link disabled" aria-current="page" href="index.html">INICIO</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="hikvision.html">HIKVISION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hilook.html">HILOOK</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ezviz.html">EZVIZ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="accesorios.html">ACCESORIOS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contactos.html">CONTACTANOS</a>
+              </li>
+          </ul>
+    </section>
+    <section class="pro-he">
+        <div>
+            <p>PRODUCTOS </p>
+        </div>
+    </section>
+    <main id="main">
+            <div class="productos">
+                <div class="producto">
+                    <div class="imagen primero">
+                        <img src="image/CELULARES/IPHONE 16.webp" alt="">
+                    </div>
+                    <h3>IPHONE 16</h3>
+                    <h5>Precio incluye IVA: </h5>
+                    <p>$1248.99</p>
+                    <button class="btn-caract" id="btn-caract">Caracteristicas</button>
+                    <button id="añadir"> Añadir al carro</button>
+                    <div class="caract" id="caract">
+                        <ul>
+                            <li>
+                                Color: Verde
+                            </li>
+                            <li>
+                                Conectividad Tipo C
+                            </li>
+                            <li>
+                                Camara 12mp
+                            </li>
+                            <li>
+                                Bateria 3877mAh
+                            </li>
+                            <li>
+                                Memoria 128GB
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="ocultar" class="ocultar">Ocultar</button>
+                </div>
+                <div class="producto">
+                    <div class="imagen primero">
+                        <img src="image/COMPONENTES/RYZEN 7 5700X 141.webp" alt="">
+                    </div>
+                    <h3>RYZEN 7 5700X</h3>
+                    <h5>Precio incluye IVA: </h5>
+                    <p>$141.99</p>
+                    <button id="añadir"> Añadir al carro</button>
+                </div>
+                <div class="producto">
+                    <div class="imagen primero">
+                        <img src="image/PERRIFERRICOS/M CURVO TEROS TE-2731S.webp" alt="">
+                    </div>
+                    <h3>MONITOR TEROS TE-2731S</h3>
+                    <h5>Precio incluye IVA: </h5>
+                    <p>$219.99</p>
+                    <button class="btn-caract" id="btn-caract">Caracteristicas</button>
+                    <button id="añadir"> Añadir al carro</button>
+                    <div class="caract" id="caract">
+                        <ul>
+                            <li>
+                                Pantalla: 27" 1080p
+                            </li>
+                            <li>
+                                Resolucion: Full HD
+                            </li>
+                            <li>
+                                Va - Curvo
+                            </li>
+                            <li>
+                                100Hz - 5ms
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="ocultar" class="ocultar">Ocultar</button>
+                </div>
+                <div class="producto">
+                    <div class="imagen primero">
+                        <img src="image/COMPUTADORAS/LAPTOP HP GAMER 15.webp" alt="">
+                    </div>
+                    <h3>LAPTOP HP GAMER</h3>
+                    <h5>Precio incluye IVA: </h5>
+                    <p>$1450.99</p>
+                    <button class="btn-caract" id="btn-caract">Caracteristicas</button>
+                    <button id="añadir"> Añadir al carro</button>
+                    <div class="caract" id="caract">
+                        <ul>
+                            <li>
+                                RYZEN 7 SERIE 5000H
+                            </li>
+                            <li>
+                                Ram 16 DDR5
+                            </li>
+                            <li>
+                                Disco SSD 500GB
+                            </li>
+                            <li>
+                                PULGADAS 15.6"
+                            </li>
+                            <li>
+                                Grafica RTX 3060
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="ocultar" class="ocultar">Ocultar</button>
+                </div>
+                <div class="producto">
+                    <div class="imagen primero">
+                        <img src="image/COMPONENTES/GIGABYTE RTX 4060 Ti 8GB.png" alt="">
+                    </div>
+                    <h3>GIGABYTE RTX 4060 Ti 8GB</h3>
+                    <h5>Precio incluye IVA: </h5>
+                    <p>$579.99</p>
+                    <button id="añadir"> Añadir al carro</button>
+                </div>
+                <div class="producto">
+                    <div class="imagen primero">
+                        <img src="image/CELULARES/POCO X7 PRO.jpg" alt="">
+                    </div>
+                    <h3>POCO X7 PRO</h3>
+                    <h5>Precio incluye IVA: </h5>
+                    <p>$370.99</p>
+                    <button class="btn-caract" id="btn-caract">Caracteristicas</button>
+                    <button id="añadir"> Añadir al carro</button>
+                    <div class="caract" id="caract">
+                        <ul>
+                            <li>
+                                Color: Negro
+                            </li>
+                            <li>
+                                Bateria: 5100mAh
+                            </li>
+                            <li>
+                                Ram: 12GB
+                            </li>
+                            <li>
+                                Almacenamiento: 512GB
+                            </li>
+                            <li>
+                                Procesador: Dimensity 8400 Ultra
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="ocultar" class="ocultar">Ocultar</button>
+                </div>
+                <div class="producto">
+                    <div class="imagen primero">
+                        <img src="image/COMPUTADORAS/PC GAMER I7.jpg" alt="">
+                    </div>
+                    <h3>PC Intel i7 12700K</h3>
+                    <h5>Precio incluye IVA: </h5>
+                    <p>$1639.99</p>
+                    <button class="btn-caract" id="btn-caract">Caracteristicas</button>
+                    <button id="añadir"> Añadir al carro</button>
+                    <div class="caract" id="caract">
+                        <ul>
+                            <li>
+                                Procesador Intel i7-12700k
+                            </li>
+                            <li>
+                                Ram 32 DDR4
+                            </li>
+                            <li>
+                                Disco SSD 1TB 
+                            </li>
+                            <li>
+                                Monitor 24" 180Hz
+                            </li>
+                            <li>
+                                Grafica Nvidia RTX 4060
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="ocultar" class="ocultar">Ocultar</button>
+                </div>
+                <div class="producto">
+                    <div class="imagen primero">
+                        <img src="image/PERRIFERRICOS/ERGO 9000S PRO.png" alt="">
+                    </div>
+                    <h3>ERGO 9000S PRO</h3>
+                    <h5>Precio incluye IVA: </h5>
+                    <p>$19.99</p>
+                    
+                    <button id="añadir"> Añadir al carro</button>
+                </div>
+                <div class="producto">
+                    <div class="imagen primero">
+                        <img src="image/CELULARES/XIOMI 14T.jpg" alt="">
+                    </div>
+                    <h3>XIOMI 14T</h3>
+                    <h5>Precio incluye IVA: </h5>
+                    <p>$799.99</p>
+                    <button class="btn-caract" id="btn-caract">Caracteristicas</button>
+                    <button id="añadir"> Añadir al carro</button>
+                    <div class="caract" id="caract">
+                        <ul>
+                            <li>
+                                Color : Negro
+                            </li>
+                            <li>
+                                Bateria: 5000mAh
+                            </li>
+                            <li>
+                                Ram: 16GB
+                            </li>
+                            <li>
+                                Almacenamiento: 1TB
+                            </li>
+                            <li>
+                                Procesador: Dimensity 9300+
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="ocultar" class="ocultar">Ocultar</button>
+                </div>
+                <div class="producto">
+                    <div class="imagen primero">
+                        <img src="image/COMPONENTES/C COUGAR GAMER 65.png" alt="">
+                    </div>
+                    <h3>CASE COUGAR GAMER</h3>
+                    <h5>Precio incluye IVA: </h5>
+                    <p>$65.99</p>
+                    
+                    <button id="añadir"> Añadir al carro</button>
+                    
+                </div>
+                <div class="producto">
+                    <div class="imagen primero">
+                        <img src="image/PERRIFERRICOS/KIT GAMER MEETION C490.webp" alt="">
+                    </div>
+                    <h3>KIT GAMER C490</h3>
+                    <h5>Precio incluye IVA: </h5>
+                    <p>$30.99</p>
+                    
+                    <button id="añadir"> Añadir al carro</button>
+                    
+                </div>
+                <div class="producto">
+                    <div class="imagen primero">
+                        <img src="image/COMPUTADORAS/Ryzen-5-3600-Rx-6500XT-328x328.webp" alt="">
+                    </div>
+                    <h3> PC RYZEN 5 5500</h3>
+                    <h5>Precio incluye IVA: </h5>
+                    <p>$699.99</p>
+                    <button class="btn-caract" id="btn-caract">Caracteristicas</button>
+                    <button id="añadir"> Añadir al carro</button>
+                    <div class="caract" id="caract">
+                        <ul>
+                            <li>
+                                CPU GAMER RYZEN 5 5500
+                            </li>
+                            <li>
+                                Ram 32 DDR4
+                            </li>
+                            <li>
+                                Disco SSD 500GB
+                            </li>
+                            <li>
+                                Fuente 600w certificada
+                            </li>
+                            <li>
+                                Grafica NO INCLUYE
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="ocultar" class="ocultar">Ocultar</button>
+                </div>
+            </div>   
+            
+                <section class="contactos" id="contactos">
+                    <div>
+                        <h3>CONTACTATE <br> CONMIGO</h3>
+                        <div class="iconsRedes">
+                            <a href="" class="bi-facebook" ></a>
+                            <a href="https://wa.me/593992379617?text=Hola,%20estoy%20interesado%20en%20tus%20productos" class="bi-whatsapp"></a>
+                            <a href="" class="bi-tiktok"></a>
+                            <a href="" class="bi-instagram"></a>
+                            <a href="" class="bi-twitter-x"> </a>
+                        </div>
+                    </div>
+              </section>
+    </main>
+    <footer>
+        <div class="img-footer">
+            <img src="image/logo camara.png" alt="LogoEMpresa">
+        </div>
+        <div class="info-footer">
+            <strong>SITIO</strong>
+            <ul>
+                <li>
+                    Página Corporativa
+                </li>
+                <li>
+                    Centro de Servicio Técnico
+                </li>
+                <li>
+                    Responsabilidad ambiental
+                </li>
+            </ul>
+            <strong>LEGAL</strong>
+            <ul>
+                <li>
+                    Politicas de garantia
+                </li>
+                <li>
+                    Politica de proteccion de datos
+                </li>
+            </ul>
+        </div>
+        <section class="tienda-div">
+            <div class="tienda-footer">
+                <strong> CONTACTOS QUITO</strong> <br>
+                <i class="bi bi-geo-alt-fill"></i> Argelia: Calle Taya y Taday <br>
+                <i class="bi bi-telephone-fill"></i> (02) 2911656/ 0992379617 <br>
+                <i class="bi bi-envelope-fill"></i> alex1812solo@gmail.com
+            </div>
+            <div class="tienda-footer">
+                <strong>CONTACTO GUAYAQUIL</strong> <br>
+                <i class="bi bi-geo-alt-fill"></i> Calle CH Onceava y Septima <br>
+                <i class="bi bi-telephone-fill"></i> (02) 2456454/ 0994040222 <br>
+                <i class="bi bi-envelope-fill"></i> alex1812solo@gmail.com
+            </div>
+
+        </section>
+        
+    </footer>
+    <section class="distri">
+        <div>
+            <img src="image/servientrega.jpg" alt="">
+        </div>
+        <div>
+            <img src="image/tramaco.png" alt="">
+        </div>
+    </section>
+    <section class="copy">
+        <div>
+            <p>Copyright © 2024. Techzy C.A. Todos los derechos reservados.</p>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+</body>
+</html>

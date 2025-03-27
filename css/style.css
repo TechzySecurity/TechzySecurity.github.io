@@ -1,0 +1,938 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+:root{
+    --colorPrimario: #7DCEA0;
+    --colorSecudnario: #117a65;
+    --coloHearder: #0b5345;
+}
+header{
+    width: 100%;
+    background-color: var(--coloHearder);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+.logo img{
+    width: 60px;
+    border-radius: 10px;
+}
+.carrito{
+    display: none ;
+    position: absolute;
+    width: 300px;
+    height: auto;
+    margin-right: 40px;
+    margin-top: 30px;
+    right: 0px;    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 30;
+    background-color: var(--colorSecudnario);
+    padding: 20px;
+    border-radius: 30px;
+    border: solid 3px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.botones button{
+    padding: 3px 5px 5px 3px;
+    border-radius: 15px;
+}
+.botones #comprar{
+    background-color: greenyellow;
+}
+ #cerrar{
+    background-color: red;
+    padding: 3px 5px 5px 3px;
+    border-radius: 15px;
+    margin-right: 10px;
+    display: none;
+}
+#vaciar{
+    text-decoration: none;
+    padding-top: 5px;
+    color: blueviolet;
+}
+.arriba{
+    text-align: center;
+}
+.arriba p{
+    font-size: 15px;
+}
+.precios p{
+    font-size: 20px;
+    padding-top: 6px;
+}
+#precio{
+    font-size: 30px;
+}
+.bolsa{
+    font-size: 25px;
+    cursor: pointer;
+
+}
+
+.cuenta{
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 100px;
+    border: solid 2px var(--colorSecudnario);
+}
+
+.carrito .arriba{
+    width: 100%;
+}
+.caract{
+    display: none;
+}
+.btn-caract{
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: 8px;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;   
+    font-weight: bold;
+    transition: 0.5s;
+    background-color: #ffcc00;
+    color: black;
+    border: 2px solid #d4a500;
+}
+.ocultar{
+    display: none;
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: 8px;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;   
+    font-weight: bold;
+    transition: 0.5s;
+    background-color: #ffcc00;
+    color: black;
+    border: 2px solid #d4a500;
+}
+.mi-alerta {
+    font-family: 'Press Start 2P', cursive; /* Ejemplo de fuente gamer */
+    border-radius: 10px;
+}
+.caract ul{
+    text-align: center;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    border: solid 2px;
+    border-right: solid 10px var(--colorSecudnario) ;
+    border-bottom: solid 6px var(--colorSecudnario);
+    width: 260px;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: var(--colorPrimario);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.9);
+    gap: 10px;
+    padding: 15px;
+}
+.producto :hover{
+    cursor: pointer;
+    border-bottom: solid 3px black;
+    transition: .5s ease;
+    color: black;
+    transform: translateY(-5px);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+}
+.imagen img{
+    object-fit: cover;
+    width: 100%;
+    height: 180px;
+    border-radius: 20px ;
+}
+.producto h3{
+    font-family: 'Poppins', sans-serif;
+    color: #6a0dad;
+    font-size: 24px;
+    text-align: center;
+}
+.producto p{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+#añadir{
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 20px;
+    text-align: 8px;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;   
+    font-weight: bold;
+    transition: 0.5s;
+    background-color: #28a745;
+    color: white;
+    border: 2px solid #218838;
+}
+
+
+
+
+.productos{
+    width: 65%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto ;
+}
+.carrito table tbody{
+    background-color: aqua;
+    display: grid;
+    overflow-y: auto;
+    max-height: 150px;
+    width: 260px;
+    border: solid;
+}
+.carrito table tbody :hover{
+    transition: .5s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateX(-2px);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.carrito table tbody tr{
+    border: solid 0.5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr    20px;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    padding: 5px;
+}
+.carrito table tbody tr img{
+    width: 60px;
+}
+.carrito table tbody tr td{
+    font-size: 15px;
+}
+.scroll{
+    background-color: green;
+}
+.menuTienda{
+    padding-top: 110px;
+    padding-bottom: 15px;
+    box-shadow: 10px 2px 14px rgba(0, 0, 0, 0.2);
+}
+
+main{
+    min-height: 100vh;
+    display: grid;
+    grid-template: 
+    "product contactos"
+    / 80% 15%; 
+}
+.contactos{
+    grid-area: contactos;
+    place-content: center;
+    width: 200px;
+position: sticky;
+top: 20%;
+height: 525px;
+display: block;
+grid-column: 2/2;
+right: 40px;
+margin: 20px;
+margin-bottom: 60px;
+border: solid 2px ;
+border-radius: 25px 25px 25px 25px;
+padding: 20px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+background-color: rgba(255, 255, 255, 0.8);
+}
+.contactos :hover{
+    transform: scale(1.05);
+}
+.contactos h3{
+    text-align: center;
+}
+
+.iconsRedes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin: 30px;
+}
+.iconsRedes a{
+    color: black;
+}
+.oculto{
+    display: none;
+}
+.ver{
+    display: block;
+}
+.carousel{
+    margin-top: 25px;
+    background-color: var(--colorSecudnario);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.9);
+    width: 1100px;
+    height: auto;
+    padding-top: 10px ;
+    padding-left: 105px;
+    padding-bottom: 90px;
+    margin-right: 50px;
+    border-radius: 40px;
+}
+.carusel-pro{
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-right: 90px ;
+    margin-left: 200px;
+    background-color: red;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8);
+
+}
+.div-caru{
+    grid-area: product;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+footer{
+    margin-top: 25px;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: flex;
+    width: 100%;
+    background-color: aquamarine;
+    justify-content: space-between;
+    height: 350px;
+    align-items: center;
+}
+.img-footer img{
+    width: 250px;
+    border-radius: 30px;
+}
+.info-footer ul li{
+    list-style: none;
+    margin: 8px;
+}
+.distri{
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+.distri img{
+    width: 150px;
+    background-color: aquamarine;
+}
+.copy{
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.copy p{
+    margin: 20px;
+}
+.pro-he{
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 ;
+}
+.pro-he p{
+    margin:  20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+
+}
+.tienda-div{
+    display: flex;
+}
+.tienda-footer{
+    margin: 35px;
+}
+@media(min-width: 278px) and (max-width: 450px ){
+    main{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .contactos{
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 0;
+        position:static;
+        width: 95%;
+        height: 100px;
+    }
+    .contactos h3{
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+    .iconsRedes{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        justify-content: space-around;
+    }
+    .productos{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 0;
+    }
+    .producto{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    footer{
+        margin: 0;
+        margin-top: 20px;
+        padding:0 ;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .img-footer{
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+    .info-footer{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        font-size: 8px;
+    }
+    .info-footer ul li{
+        margin: 0 auto;
+    }
+    .tienda-div{
+        padding: 0;
+        margin: 0;
+        margin: 0 auto;
+        width: 90%;
+        justify-content: space-around;
+
+        align-items: center;
+    }
+    .tienda-footer{
+        padding: 0;
+        margin: 0;
+        margin: 15px;
+        font-size: 10px;
+        margin-bottom: 15px;
+        width: 40%;
+    }
+    .tienda-footer i{
+        padding: 5px;
+    }
+    .distri{
+        padding: 0;
+        margin: 0;
+        width: 90%;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .distri img{
+        padding: 0;
+        margin: 0;
+        width: 75px;
+    }
+    .copy{
+        
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+
+}
+@media(min-width: 451px) and (max-width: 600px ){
+    main{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .contactos{
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 0;
+        position:static;
+        width: 95%;
+        height: 100px;
+    }
+    .contactos h3{
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+    .iconsRedes{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        justify-content: space-around;
+    }
+    .productos{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 0;
+    }
+    .producto{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    footer{
+        margin: 0;
+        margin-top: 20px;
+        padding:0 ;
+        width: 100%;
+        display: flex;
+        height: auto;
+    }
+    .img-footer{
+        width: 20%;
+        margin: 0;
+        padding: 0;
+    }
+    .img-footer img{
+        width: 100%;
+        border-radius: 10px;
+        width: 50px;
+        margin-left: 25%;
+    }
+    .info-footer{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        font-size: 60%;
+    }
+    .info-footer ul li{
+        margin: 0 auto;
+    }
+    .tienda-div{
+        padding: 0;
+        margin: 0;
+        margin: 0 auto;
+        width: 90%;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 40%;
+        align-items: center;
+    }
+    .tienda-footer{
+        padding: 0;
+        margin: 0;
+        margin: 15px;
+        font-size: 10px;
+        margin-bottom: 10px;
+        width: 90%;
+    }
+    .tienda-footer i{
+        padding: 5px;
+    }
+    .distri{
+        padding: 0;
+        margin: 0;
+        width: 90%;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .distri img{
+        padding: 0;
+        margin: 0;
+        width: 75px;
+    }
+    .copy{
+        
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+
+}
+@media(min-width: 601px) and (max-width: 800px){
+    main{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .contactos{
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 0;
+        position:static;
+        width: 95%;
+        height: 100px;
+    }
+    .contactos h3{
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+    .iconsRedes{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        justify-content: space-around;
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        margin-top: 20px !important;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .producto{
+        width: 80%;
+        margin: 0;
+        margin-bottom: 18px !important;
+        margin: 0 auto;
+    }
+    footer{
+        margin: 0;
+        margin-top: 20px;
+        padding:0 ;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+    }
+    .img-footer{
+        margin: 0;
+        padding: 0;
+        width: 20%;
+    }
+    .img-footer img{
+        width: 75%;
+        border-radius: 15px;
+        margin-left: 25% ;
+        margin-right: 15px;
+    }
+    .info-footer{
+        display: flex;
+        flex-direction: column;
+
+        margin: 0;
+        padding: 0;
+        font-size: 65%;
+        margin-left: 5%;
+        width: 30%;
+    }
+    .info-footer ul li{
+        margin: 0 auto;
+    }
+    .tienda-div{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+        width: 60%;
+        justify-content: space-around;
+    }
+    .tienda-footer{
+        padding: 0;
+        margin: 0;
+        margin: 15px;
+        font-size: 70%;
+        margin-bottom: 15px;
+    }
+    .tienda-footer i{
+        padding: 5px;
+    }
+    .distri{
+        padding: 0;
+        margin: 0;
+        width: 90%;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .distri img{
+        padding: 0;
+        margin: 0;
+        width: 100px;
+    }
+    .copy{
+        
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+@media(min-width: 800px) and (max-width: 950px){
+    main{
+        margin: 0;
+        padding: 0;
+    }
+    .contactos{
+        margin: 0 auto;
+        margin-top: 25%;
+        padding: 0;
+        position: sticky;
+        width: 80%;
+        height: 280px;
+    }
+    .contactos h3{
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        font-size: 15px;
+    }
+    .iconsRedes{
+        padding: 0;
+        margin: 0;
+        padding-bottom: 15px ;
+        display: flex;
+        flex-direction: column;
+        font-size: 28px;
+        justify-content: space-around;
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        margin-top: 20px !important;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .producto{
+        width: 80%;
+        margin: 0;
+        margin-bottom: 18px !important;
+        margin: 0 auto;
+    }
+    footer{
+        margin: 0;
+        margin-top: 20px;
+        padding:0 ;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+    }
+    .img-footer{
+        margin: 0;
+        padding: 0;
+        width: 20%;
+    }
+    .img-footer img{
+        width: 75%;
+        border-radius: 15px;
+        margin-left: 25% ;
+        margin-right: 15px;
+    }
+    .info-footer{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        font-size: 65%;
+        margin-left: 5%;
+        width: 30%;
+    }
+    .info-footer ul li{
+        margin: 0 auto;
+    }
+    .tienda-div{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+        width: 60%;
+        justify-content: space-around;
+    }
+    .tienda-footer{
+        padding: 0;
+        margin: 0;
+        margin: 15px;
+        font-size: 70%;
+        margin-bottom: 15px;
+    }
+    .tienda-footer i{
+        padding: 5px;
+    }
+    .distri{
+        padding: 0;
+        margin: 0;
+        width: 90%;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .distri img{
+        padding: 0;
+        margin: 0;
+        width: 100px;
+    }
+    .copy{
+        
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 10px;
+        text-align: center;
+    }
+}
+@media(min-width: 950px){
+    main{
+        margin: 0;
+        padding: 0;
+    }
+    .contactos{
+        margin: 0 auto;
+        margin-top: 25%;
+        padding: 0;
+        position: sticky;
+        width: 80%;
+        height: 280px;
+    }
+    .contactos h3{
+        margin: 0;
+        padding: 0;
+        padding: 10px;
+        font-size: 15px;
+    }
+    .iconsRedes{
+        padding: 0;
+        margin: 0;
+        padding-bottom: 15px ;
+        display: flex;
+        flex-direction: column;
+        font-size: 28px;
+        justify-content: space-around;
+    }
+    .productos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 auto;
+        margin-top: 30px !important;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+    .producto{
+        width: 90%;
+        margin: 0;
+        margin-bottom: 18px !important;
+        margin: 0 auto;
+    }
+    footer{
+        margin: 0;
+        margin-top: 20px;
+        padding:0 ;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+    }
+    .img-footer{
+        margin: 0;
+        padding: 0;
+        width: 20%;
+    }
+    .img-footer img{
+        width: 75%;
+        border-radius: 15px;
+        margin-left: 25% ;
+        margin-right: 15px;
+    }
+    .info-footer{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        margin-left: 5%;
+        width: 30%;
+    }
+    .info-footer ul li{
+        margin: 0 auto;
+    }
+    .tienda-div{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+        width: 60%;
+        justify-content: space-around;
+    }
+    .tienda-footer{
+        padding: 0;
+        margin: 0;
+        margin: 15px;
+        font-size: 100%;
+        margin-bottom: 15px;
+    }
+    .tienda-footer i{
+        padding: 5px;
+    }
+    .distri{
+        padding: 0;
+        margin: 0;
+        width: 90%;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .distri img{
+        padding: 0;
+        margin: 0;
+        width: 100px;
+    }
+    .copy{
+        
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 90%;
+        text-align: center;
+    }
+}
+
+
+
