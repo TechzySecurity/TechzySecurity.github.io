@@ -76,6 +76,20 @@ header{
     cursor: pointer;
 
 }
+.resolucion-cam{
+    padding: 5px;
+    margin-top: 25px;
+    border-radius: 80%;
+    text-align: center;
+    border-top: solid 4px #398a4a;
+    border-bottom: solid 4px #398a4a;
+}
+.resolucion-cam h3{
+    font-family: cursive;
+}
+.resolucion-cam h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 .cuenta{
     font-size: 20px;
